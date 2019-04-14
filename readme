@@ -27,8 +27,8 @@ In this case Cdl will define myComplexType:0 brick with pos and positions set to
 What about the type of inside empty elements? Normally all empty elements (slots) have the inside rule from the main brick. You can set also to „read only” or own - inherited from recognized brick like span in our example. 
 To do different type, define a brick at certain position name:1:0. If Cdl will find already defined element, will not analyze this brick even if exist in body content.
 
-To tell set reqbody=true and define brick body in file.
-You can also use reqbody to set static properties, not defined manually.
+To tell set reqbody=true and define brick body in .txt file.
+You can also use reqbody to set static properties, not defined manually in xml file.
 
 I developed framework description xml format and Cdl - a language for more simple framework definition.
 
@@ -44,14 +44,19 @@ and a general description for one framework element:
 Fdl Name base Html-5  
   
 Define <ElementName> <OptElementLabel>  
+
 as class1,...  
 as tag tag1,...  
 as attr attr1=val1,...  
 as pos position1,...  
+
 with <"req"> class1,...  
 with <"req"> attr attr1=val1,...  
 with <"req"> attr attr1 <"number"/...>  
+
 before <element_list>  
 after <element_list>  
 at <position_list>  
+
 analyze <"body">
+
